@@ -1,0 +1,7 @@
+def Hello(x):
+    if(x==0):
+        return
+    print(x)
+    Hello(x-1)
+x=4
+Hello(x)
