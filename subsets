@@ -1,0 +1,16 @@
+def generate(ind,subset,ans,nums):
+    if(ind==len(nums)):#out of bound
+        ans.append(subset.copy())
+        return
+    subset.append(nums[ind])
+    generate(ind+1,subset,ans,nums)
+    subset.pop()
+    generate(ind+1,subset,ans,nums)
+def subset(nums):
+    ind=0
+    subset=[]
+    ans=[]
+    generate(ind,subset,ans,nums)
+    return ans
+nums=list(map(int,input().split()))
+print(subset(nums))
