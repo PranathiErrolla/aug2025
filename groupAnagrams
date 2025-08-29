@@ -1,0 +1,12 @@
+from collections import Counter
+def groupAnagrams(strs):
+    d=defaultdict(list)
+    for word in strs:
+        s_w="".join(sorted(word))
+        d[s_w].append(word)
+    result=[]
+    for key in sorted(d):
+        result.append(d[key])
+    return result
+strs=list(map(str,input().split()))
+print(groupAnagrams(strs))
