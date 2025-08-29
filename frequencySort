@@ -1,0 +1,10 @@
+from collections import Counter
+def frequencySort(s):
+    d=Counter(s)
+    u_d=sorted(d.items(),key=lambda x:-x[1])
+    result=""
+    for key,value in u_d:
+        result=result+key*value
+    return result
+s=input()
+print(frequencySort(s))
