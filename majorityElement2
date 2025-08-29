@@ -1,0 +1,11 @@
+from collections import Counter
+def majorityElement(nums):
+    n=len(nums)
+    d=Counter(nums)
+    ans=[]
+    for key,value in d.items():
+        if(value>n//3):
+            ans.append(key)
+    return key
+nums=list(map(int,input().split()))
+print(majorityElement(nums))
