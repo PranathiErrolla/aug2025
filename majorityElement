@@ -1,0 +1,9 @@
+from collections import Counter
+def majorityElement(nums):
+    n=len(nums)
+    d=Counter(nums)
+    for key,value in d.items():
+        if(value>n//2):
+            return key
+nums=list(map(int,input().split()))
+print(majorityElement(nums))
