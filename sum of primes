@@ -1,0 +1,8 @@
+num=int(input())
+Sum=0
+while(num!=0):
+    rem=num%10
+    if(rem in[2,3,5,7]):
+        Sum+=rem
+    num=num//10
+print(Sum)
